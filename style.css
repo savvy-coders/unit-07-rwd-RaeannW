@@ -1,9 +1,55 @@
+.flex-container {
+  display: flex;
+}
+
 .container {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .nav {
-  display: block;
+  display: flex;
   justify-content: space-between;
+}
+
+.nav-item:hover{
+  background-color: rgb(83, 83, 83);
+  color: white;
+}
+
+.column {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    font-size: 5vw;
+    flex-direction: column;
+  }
+  .column {
+    font-size: 5vw;
+    width: 80%;
+    display: flex;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    background-color: #ccc;
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    background-color: #eee;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+  (min--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-device-pixel-ratio: 2) {
+    .column {
+      border-color: red;
+    }
 }
